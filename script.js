@@ -10,7 +10,7 @@ function searchMovie() {
         },
         success: function (result) {
             // console.log(result);
-            if (result.Response == "true") {
+            if (result.Response == "TRUE") {
                 let movies = result.Search;
                 // console.log(movies);
                 $.each(movies, function (i, data) {
@@ -59,7 +59,7 @@ $('#movie-list').on('click', '.see-detail', function () {
             'i': $(this).data('id')
         },
         success: function (movie) {
-            if(movie.Response === "true") {
+            if(movie.Response === "TRUE") {
                 $('#modal-body').html(`
                 <div class="container-fluid">
                     <div class="row">
